@@ -56,37 +56,18 @@ y=int(week)#just to make sure y is asigned to an integer and not a string
 def day_of_the_week(month,day): #assigns a day of the week to a certain date sunday==1...saturday==7
     if month==1:
         q=((day+5)%7)
-        if q==0:
-            return 7
-        else:
-            return q
     if month==2:
         q=((day+1)%7)
-        if q==0:
-            return 7
-        else:
-            return q
     if month==3:
         q=((day+1)%7)
-        if q==0:
-            return 7
-        else:
-            return q
     if month==4:
         q=((day+4)%7)
-        if q==0:
-            return 7
-        else:
-            return q
     if month==5 and 1<day<=14:
         q=((day+6))%7
-        if q==0:
-            return 7
-        else:
-            return q
+    if q==0:
+        return 7
     else:
-        print("that date is invalid, how did you get this far?")
-        sys.exit()
+        return q
 q=int(day_of_the_week(month,day))#i just wanted to thank q with a namesake
 def day_alpha(q):
     if q==1:
